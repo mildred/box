@@ -24,4 +24,13 @@ Each directory in the |plugins` directory corresponds to a plugin. Each plugin
 can have a `units` directory. This directory is appended to the end of
 `SYSTEMD_UNIT_PATH`.
 
+Because of propagation of environment variables, you must restart systemd if you
+add/remove a plugin.
 
+Starting up with SystemD
+========================
+
+Just try this out:
+
+    ./box.sh systemd &
+    ./box.sh systemctl --user exit
